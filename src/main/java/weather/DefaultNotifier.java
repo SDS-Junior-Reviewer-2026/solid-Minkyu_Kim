@@ -1,6 +1,6 @@
 package weather;
 
-public class Phone implements Notifier {
+public class DefaultNotifier implements Notifier {
 
     @Override
     public String generateWeatherAlert(String weatherConditions) {
