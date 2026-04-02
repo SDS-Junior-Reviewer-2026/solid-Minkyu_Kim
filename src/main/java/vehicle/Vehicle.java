@@ -11,9 +11,10 @@ public class Vehicle {
     }
 
     // this is not a car's responsibility.
+    /*
     public void reFuel(){
         remainingFuel = maxFuel;
-    }
+    } */
 
     public int getMaxFuel() {
         return maxFuel;
@@ -29,5 +30,9 @@ public class Vehicle {
 
     public void accelerate() {
         remainingFuel--;
+    }
+
+    public void addFuel(final int fuel) {
+        remainingFuel += fuel;
     }
 }

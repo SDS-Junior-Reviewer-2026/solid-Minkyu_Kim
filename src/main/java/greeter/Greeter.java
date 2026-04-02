@@ -2,7 +2,23 @@ package greeter;
 
 public class Greeter {
     String formality;
+    private final GreetingFactory greetingFactory;
 
+    public Greeter() {
+        this.greetingFactory = new GreetingFactory();
+    }
+
+    public String greet() {
+        GreetingStrategy strategy = greetingFactory.create(formality);
+        return strategy.greet();
+    }
+
+    public void setFormality(String formality) {
+        this.formality = formality;
+    }
+}
+
+/*
     public String greet() {
         if (this.formality == "formal") {
             return "Good evening, sir.";
@@ -13,9 +29,4 @@ public class Greeter {
         } else {
             return "Hello.";
         }
-    }
-
-    public void setFormality(String formality) {
-        this.formality = formality;
-    }
-}
+  } */

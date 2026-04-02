@@ -5,4 +5,10 @@ abstract class Apartment {
     int numberOfBedrooms;
 
     abstract void setSquareFootage(int sqft);
+    abstract void upgradeBedroomNumber();
+
+    void upgrade() {
+        setSquareFootage(squareFootage + 40);
+        upgradeBedroomNumber();
+    }
 }
